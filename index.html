@@ -259,6 +259,23 @@ const heroImage=document.querySelector("#hero__animation__img"),tl=document.quer
   <script>/*<![CDATA[*/
 let project=document.getElementsByClassName("project"),slideIndex=1;function showProject(e){e>project.length&&(slideIndex=1),e<1&&(slideIndex=project.length);for(let t=0;t<project.length;t++)project[t].style.display="none";project[slideIndex-1].style.display="flex"}function navigateProject(e){showProject(slideIndex+=e)}showProject(slideIndex);
 /*]]>*/</script>
+
+<audio id="myAudio" muted autoplay>
+  <source src="https://mdsunvir.github.io/koi.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+  // Check if audio is playing after a short delay (adjust 500ms as needed)
+  setTimeout(function() {
+    if (!document.getElementById('myAudio').paused) {
+      // Audio is playing, all good
+    } else {
+      // Not playing, remove muted attribute to allow user interaction
+      document.getElementById('myAudio').muted = false;
+    }
+  }, 500);
+</script>
+
     
   </body>
 </html>
